@@ -20,8 +20,7 @@ namespace Facultad
             this.conexionARed = con;
             this.proyeccion = proy;
 
-            int a;
-            // DICK
+            
         }
 
 
