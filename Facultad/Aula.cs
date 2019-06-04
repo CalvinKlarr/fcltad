@@ -19,6 +19,9 @@ namespace Facultad
             this.capacidad = cap;
             this.conexionARed = con;
             this.proyeccion = proy;
+
+            int a;
+            // DICK
         }
 
 
