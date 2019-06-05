@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 
 namespace Facultad
 {
-    class User
+    class Usuario
     {
-        string nombre;
-        string apellido;
-        int dni;
-        int tel;
-        string direc;
-        int id;
+        protected string nombre { get { return nombre; } set { nombre = value; } }
+        protected string apellido { get { return apellido; } set { apellido = value; } }
+        protected int dni { get { return dni; } set { dni = value; } }
+        protected int tel { get { return tel; } set { tel = value; } }
+        protected string direc { get { return direc; } set { direc = value; } }
+        protected int id { get { return id; } set { id = value; } }
+
+
+     
 
     }
 }
