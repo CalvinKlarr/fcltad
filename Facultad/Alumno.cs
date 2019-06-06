@@ -9,7 +9,6 @@ namespace Facultad
     class Alumno:Usuario
     {
         private Curso curso { get { return curso; } set { curso = value; } }
-        private Dictionary<string, Calificacion> calif = new Dictionary<string, Calificacion>();
         private int id;
         public List<string> aprobadas = new List<string>();
         public int Id { get { return id; } set { id = value; } }
@@ -25,6 +24,12 @@ namespace Facultad
             
             this.curso = curse;
 
+        }
+
+        public override string ToString()
+        {
+            return "Nombre: "+this.nombre+"\nApellido: "+this.apellido+
+                "\nDireccion: "+this.direc+"\nDNI: "+this.dni+"\nTelefono: "+this.Tel+"\nLegajo: "+this.Id+"\n";
         }
 
 
