@@ -11,6 +11,10 @@ namespace Facultad
         static void Main(string[] args)
         {
 
+            bool josi = false;
+
+            while (!josi)
+            {
 
             Console.WriteLine("\t --- Bienvenido a UNI-APP --- ");
             Console.WriteLine("\t  ");
@@ -23,10 +27,6 @@ namespace Facultad
 
             int caseSwitch = Convert.ToInt16(Console.ReadLine());
 
-            bool josi = false;
-
-            while (josi)
-            {
 
                 switch (caseSwitch)
                 {
