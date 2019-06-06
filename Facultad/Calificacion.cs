@@ -8,16 +8,26 @@ namespace Facultad
 {
     class Calificacion
     {
-        private int[] parciales = new int[2];
+        private int[] parciales = new int[3];
 
         private int[] recup = new int[2];
 
-        public int[] getParciales() { return parciales; }
+
+
+        public int[] getParciales() {
+
+
+            Console.WriteLine();
+
+            return parciales; }
+
+
 
         public void SetParciales(int notas)
         {
             foreach (int i in parciales)
             {
+
                 System.Console.Write("{0} ", notas);
             }
         }

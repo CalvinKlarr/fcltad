@@ -49,6 +49,7 @@
     <Compile Include="Calificacion.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="CursoControl.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
