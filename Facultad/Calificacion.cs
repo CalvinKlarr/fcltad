@@ -14,30 +14,54 @@ namespace Facultad
 
 
 
-        public int[] getParciales() {
+        public int[] TotalParciales(){ return parciales; }
 
-
-            Console.WriteLine();
-
-            return parciales; }
-
-
-
-        public void SetParciales(int notas)
+        public int getParciales(int numParcial)
         {
-            foreach (int i in parciales)
+            switch (numParcial)
             {
+                case 1: return parciales[1];  break;
+                case 2: return parciales[2]; break;
+                case 3: return parciales[3]; break;
 
-                System.Console.Write("{0} ", notas);
+            }
+            return 0;
+        }
+
+
+        public void  setParciales(int numParcial, int nota)
+        {
+
+            switch (numParcial)
+            {
+                case 1: parciales[1] = nota; break;
+                case 2: parciales[2] = nota; break;
+                case 3: parciales[3] = nota; break;
+
             }
         }
 
-        public int[] getRecup(){ return recup; }
+       // public int[] getTotalRecups(){ return recup; }
 
-        public void setRecup(int notes) {
-            foreach (int i in recup)
+        public int getRecup(int numRecup)
+        {
+            switch (numRecup)
             {
-                System.Console.Write("{0} ", notes);
+                case 1: return recup[1]; break;
+                case 2: return recup[2]; break;
+            }
+            return 0;
+        }
+
+
+        public void setRecup(int numRecup, int nota)
+        {
+
+            switch (numRecup)
+            {
+                case 1: recup[1] = nota; break;
+                case 2: recup[2] = nota; break;
+              
             }
         }
 

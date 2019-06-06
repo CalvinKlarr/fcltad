@@ -10,6 +10,8 @@ namespace Facultad
     {
         static void Main(string[] args)
         {
+
+
         }
     }
 }
