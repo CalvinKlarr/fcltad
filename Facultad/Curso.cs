@@ -11,7 +11,11 @@ namespace Facultad
         private List<Asignatura> asignaturas = new List<Asignatura>();
         private List<Alumno> alumnos = new List<Alumno>();
         private Aula aula;
-        private string division { get { return division; } set { division = value; } }
+        private string division; 
+        public string Division { get { return division; } set { division = value; } }
+
+
+
 
 
 

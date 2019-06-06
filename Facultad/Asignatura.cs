@@ -13,11 +13,11 @@ namespace Facultad
         //to-do, implementar revision prof
         private List<Profesor> profesores = new List<Profesor>();
         //to-do implementar revision calificaciones
-        private Dictionary<Alumno, Calificacion> calificaciones = new Dictionary<Alumno, Calificacion>();
+        private Dictionary<string, Calificacion> calificaciones = new Dictionary<string, Calificacion>();
 
         private Curso curso = new Curso();
 
-        public Asignatura(string asig, List<Asignatura> asigs, List<Profesor> profes, Dictionary<Alumno,Calificacion> califs, Curso curs)
+        public Asignatura(string asig, List<Asignatura> asigs, List<Profesor> profes, Dictionary<string,Calificacion> califs, Curso curs)
         {
             this.asignatura = asig;
             this.correlativas = asigs;

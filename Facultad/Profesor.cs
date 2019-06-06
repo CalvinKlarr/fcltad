@@ -9,7 +9,6 @@ namespace Facultad
     class Profesor:Usuario
     {
        private Asignatura asig { get { return asig; } set { asig = value; } }
-        private int id { get { return id; } set { id = value; } }
 
         public Profesor(string name, string lname, int doc, int phone, string direcc, int id, Asignatura asign )
         {
@@ -18,7 +17,6 @@ namespace Facultad
             this.dni = doc;
             this.tel = phone;
             this.direc = direcc;
-            this.id = id;
             this.asig = asign;
 
         }
