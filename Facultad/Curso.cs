@@ -15,6 +15,12 @@ namespace Facultad
         public string Division { get { return division; } set { division = value; } }
 
 
+        public List<Asignatura> getAsignaturas()
+        {
+            return this.asignaturas;
+        }
+
+
 
 
 
