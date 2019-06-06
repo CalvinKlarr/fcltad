@@ -34,10 +34,21 @@ namespace Facultad
 
                         Console.WriteLine("\t --- UNI-APP --- ");
                         Console.WriteLine("\t  ");
-                        Console.WriteLine(" 1- Ingresar asignatura deseada ");
-                        Console.WriteLine(" 2- Ingresar Num de legajo ");
+                        Console.WriteLine(" Escriba exit para volver al Menu principal ");
 
+                        Console.WriteLine(" - Ingresar la asignatura deseada ");
+                        string asign = Console.ReadLine();
 
+                        if (asign == "exit")   { continue; }
+
+                        Console.WriteLine(" - Ingresar Id ");
+                        int id = Convert.ToInt16(Console.ReadLine());
+
+                        ProgramControl inscrib = new ProgramControl();
+                       
+                        inscrib.inscribir(id, asign );
+
+                       
                         break;
 
                     case 2:
