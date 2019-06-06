@@ -8,10 +8,14 @@ namespace Facultad
 {
     class Aula
     {
-        private int id { get { return id; } set { id = value; } }
-        private int capacidad { get { return capacidad; } set { capacidad = value;} }
-        private bool conexionARed { get {return conexionARed; } set {conexionARed = value; } }
-        private bool proyeccion { get { return proyeccion; } set { proyeccion = value; } }
+        private int id;
+        public int Id { get { return id; } set { id = value; } }
+        private int capacidad;
+        public int Capacidad { get { return capacidad; } set { capacidad = value; } }
+        private bool conexionARed;
+        public bool ConexionARed { get { return conexionARed; } set { conexionARed = value; } }
+        private bool proyeccion;
+        public bool Proyeccion { get { return proyeccion; } set { proyeccion = value; } }
 
         public Aula(int i, int cap, bool con, bool proy)
         {

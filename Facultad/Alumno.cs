@@ -9,9 +9,11 @@ namespace Facultad
     class Alumno:Usuario
     {
         private Curso curso { get { return curso; } set { curso = value; } }
-        private Calificacion calif { get { return calif; } set { calif= value; } }
+        private Dictionary<string, Calificacion> calif = new Dictionary<string, Calificacion>();
+        private int id;
+        public int Id { get { return id; } set { id = value; } }
 
-        public Alumno(string name, string lname, int doc, int phone, string direcc, int id, Calificacion califi, Curso curse)
+        public Alumno(string name, string lname, int doc, int phone, string direcc, int id, Curso curse)
         {
             this.nombre = name;
             this.apellido = lname;
@@ -19,7 +21,7 @@ namespace Facultad
             this.tel = phone;
             this.direc = direcc;
             this.id = id;
-            this.calif = califi;
+            
             this.curso = curse;
 
         }

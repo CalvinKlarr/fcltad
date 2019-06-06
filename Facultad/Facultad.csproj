@@ -48,8 +48,7 @@
     <Compile Include="Aula.cs" />
     <Compile Include="Calificacion.cs" />
     <Compile Include="Curso.cs" />
-    <Compile Include="CursoControl.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="ProgramControl.cs" />
     <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

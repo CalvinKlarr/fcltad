@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Facultad
 {
-    class CursoControl
+    class ProgramControl
     {
         private List<Curso> cursos = new List<Curso>();
     }
