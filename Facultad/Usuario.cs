@@ -14,7 +14,7 @@ namespace Facultad
         protected int dni { get { return dni; } set { dni = value; } }
         protected int tel { get { return tel; } set { tel = value; } }
         protected string direc { get { return direc; } set { direc = value; } }
-        protected int id { get { return id; } set { id = value; } }
+        
 
 
      
