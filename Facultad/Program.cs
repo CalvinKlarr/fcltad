@@ -28,8 +28,6 @@ namespace Facultad
             while (josi)
             {
 
-
-
                 switch (caseSwitch)
                 {
                     case 1:
@@ -54,8 +52,18 @@ namespace Facultad
                         Console.WriteLine(" 6- Modificar ");
                         Console.WriteLine(" 7- Volver al Menu principal ");
 
-                    
+                        int caseSwitchAlumno = Convert.ToInt16(Console.ReadLine());
 
+                                    switch (caseSwitchAlumno)
+                                    {
+                                    /*case 1: ; break;
+                                    case 2: ; break;
+                                    case 3: ; break;
+                                    case 4: ; break;
+                                    case 5: ; break;
+                                    case 6: ; break; */
+                                    case 7:  continue; break;
+                                    }
                         break;
 
                     case 3:
