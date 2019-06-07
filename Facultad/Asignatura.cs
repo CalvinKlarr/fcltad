@@ -14,8 +14,15 @@ namespace Facultad
         
         public List<Profesor> Profesores = new List<Profesor>();
         private Dictionary<Alumno, Calificacion> calificaciones = new Dictionary<Alumno, Calificacion>();
-        private Curso curso = new Curso();
         private List<Alumno> alumnos = new List<Alumno>();
+
+        public Asignatura (string asig, List<string> correlativas)
+	    {
+            this.asign = asig;
+            this.correlativas = correlativas;
+            
+
+	    }
 
         public Asignatura(string asig, List<string> asigs, List<Profesor> profes, Dictionary<Alumno,Calificacion> califs, Curso curs)
         {

@@ -8,13 +8,23 @@ namespace Facultad
 {
     class Curso
     {
-        private List<Asignatura> asignaturas = new List<Asignatura>();
-        private List<Alumno> alumnos = new List<Alumno>();
+        private Asignatura[] asignaturas;
+        private List<Alumno> alumnos;
         private Aula aula;
         private string cur;
         public string Cur { get { return cur; } set { cur = value; } }
         private string division; 
         public string Division { get { return division; } set { division = value; } }
+
+        public Curso (Aula aula, string curs, string division)
+	    {
+            asignaturas = new Asignatura[5];
+            alumnos = new List<Alumno>();
+            this.aula = aula;
+            this.cur = curs;
+            this.division = division;
+
+	    }
 
 
         public List<Asignatura> getAsignaturas()
