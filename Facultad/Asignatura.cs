@@ -11,7 +11,8 @@ namespace Facultad
         private string asign; 
         public string Asign { get { return asign; } set { asign = value; } }
         private List<string> correlativas = new List<string>();
-        private List<Profesor> profesores = new List<Profesor>();
+        
+        public List<Profesor> Profesores = new List<Profesor>();
         private Dictionary<Alumno, Calificacion> calificaciones = new Dictionary<Alumno, Calificacion>();
         private Curso curso = new Curso();
         private List<Alumno> alumnos = new List<Alumno>();
@@ -58,6 +59,16 @@ namespace Facultad
                 }
             }
             return calif;
+        }
+
+        public List<Profesor> getProfesores()
+        {
+            return this.profesores;
+        }
+
+        public void addProfesor(Profesor profe)
+        {
+            profesores.Add(profe);
         }
 
     }

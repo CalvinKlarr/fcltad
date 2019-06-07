@@ -33,6 +33,16 @@ namespace Facultad
             return true;
         }
 
+        public Aula getAula()
+        {
+            return this.aula;
+        }
+
+        public void setAula(Aula aula)
+        {
+            this.aula = aula;
+        }
+
 
 
 

@@ -97,6 +97,70 @@ namespace Facultad
             return alum;
         }
 
+        public Aula[] verAulas()
+        {
+            Aula[] aulas = new Aula[8];
+            for(int i = 0; i<8; i++)
+            {
+                aulas[i] = cursos[i].getAula();
+            }
+            return aulas;
+        }
+
+        public Aula getAula(string curso)
+        {
+            Aula aula = Utils.findCurso(curso, cursos).getAula();
+            return aula;
+        }
+
+        public bool cambiarAula(string curso, Aula aula)
+        {
+            Curso cur = Utils.findCurso(curso, cursos);
+            cur.setAula(aula);
+            for(int i=0; i < 8; i++)
+            {
+                if (cursos[i].Cur.Equals(curso))
+                {
+                    cursos[i] = cur;
+                }
+            }
+            return true;
+        }
+
+        public List<Profesor> verProfesores()
+        {
+            List<Profesor> profesores = new List<Profesor>();
+            foreach(var a in asignaturas)
+            {
+                profesores.AddRange(a.getProfesores());
+            }
+            return profesores;
+        }
+
+        public bool altaProfesor(Profesor profe, string asignatura)
+        {
+            Asignatura asig = Utils.findAsignatura(asignaturas, asignatura);
+            asig.addProfesor(profe);
+            return true;
+
+        }
+
+        public bool bajaProfesor(int dni, string asignatura)
+        {
+            Profesor profe = Utils.findProfesor(asignaturas, dni);
+            foreach (var a in asignaturas)
+            {
+                foreach(var p in a.Profesores)
+                {
+                    if(p.Dni == dni)
+                    {
+                        a.Profesores.Remove(profe);
+                    }
+                }
+            }
+
+            return true;
+        }
 
 
 
