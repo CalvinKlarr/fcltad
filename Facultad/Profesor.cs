@@ -21,6 +21,11 @@ namespace Facultad
 
         }
 
+        public Profesor()
+        {
+
+        }
+
 
 
     }

@@ -326,12 +326,123 @@ namespace Facultad
                         Console.WriteLine(" 4- Modificar ");
                         Console.WriteLine(" 5- Volver al Menu principal ");
 
+                        int caseSwitchProfes = Convert.ToInt16(Console.ReadLine());
+                        switch (caseSwitchProfes)
+                        {
+
+                            //1- VER PROFESORES
+                            case 1:
+                                Console.WriteLine("\t --- UNI-APP --- ");
+                                Console.WriteLine("\t  ");
+                                Console.WriteLine(" Profesores:  ");
+
+                                ProgramControl verProfes = new ProgramControl();
+
+                                foreach( var i in verProfes.verProfesores())
+                                {
+                                    Console.WriteLine("\t - " + i);
+                                }
+                                ; break;
+
+
+                            //2- DAR DE ALTA
+                            case 2:
+                                
+                                Console.WriteLine("\t --- UNI-APP --- ");
+                                Console.WriteLine("\t  ");
+                                Profesor bigBoi= new Profesor();
+                                Console.WriteLine(" Complete los datos del profesor: ");
+                                Console.WriteLine("\t  ");
+                                Console.WriteLine(" Ingrese el nombre del profesor: ");
+                                bigBoi.Nombre = Console.ReadLine();
+                                Console.WriteLine(" Ingrese el apellido del profesor: ");
+                                bigBoi.Apellido = Console.ReadLine();
+                                Console.WriteLine(" Ingrese el telefono del profesor: ");
+                                bigBoi.Tel = Convert.ToInt16(Console.ReadLine());
+                                Console.WriteLine(" Ingrese el DNI del profesor: ");
+                                bigBoi.Dni = Convert.ToInt16(Console.ReadLine());
+                                Console.WriteLine(" Ingrese la dirección del profesor: ");
+                                bigBoi.Direc = Console.ReadLine();
+                                                 
+                                ProgramControl darAltaProfes = new ProgramControl();
+                                
+                                Console.WriteLine(" Inserte la asignatura a la cual pertence el profesor: ");
+                                string asigprofe = Console.ReadLine();
+
+                                darAltaProfes.altaProfesor(bigBoi, asigprofe);
+
+                                Console.WriteLine("El profesor fue dado de alta con exito! ");
+
+                                ; break;
+
+
+                            //3- DAR DE BAJA    
+                            case 3:
+                                Console.WriteLine("\t --- UNI-APP --- ");
+                                Console.WriteLine("\t  ");
+                                Console.WriteLine(" Inserte el DNI del profesor al que desea dar de baja: ");
+                                int dniproffe = Convert.ToInt16(Console.ReadLine());
+
+                                ProgramControl darBajaProfes = new ProgramControl();
+
+                                Console.WriteLine(" Inserte la asignatura a la cual pertence el profesor: ");
+                                string asigprofeBaja = Console.ReadLine();
+
+                                darBajaProfes.bajaProfesor(dniproffe, asigprofeBaja);
+                                Console.WriteLine("El profesor fue dado de baja con exito! ");
+
+                                ; break;
+
+
+
+                            //4-MODIFICAR
+                            case 4:
+
+                                Console.WriteLine("\t --- UNI-APP --- ");
+                                Console.WriteLine("\t  ");
+                                Console.WriteLine(" Escriba 7 para volver al Menu principal ");
+                                Console.WriteLine(" Ingrese el DNI del profesor al que desee modificar:  ");
+                                int Dninum = Convert.ToInt16(Console.ReadLine());
+                                if (Dninum == 7) { continue; }
+                                else
+                                {
+                                    Profesor bigboiMod;
+                                    ProgramControl modProfe = new ProgramControl();
+                                    bigboiMod = modProfe.getProfesor(Dninum);
+
+                                    Console.WriteLine(" Ya puede modificar al alumno! ");
+                                    Console.WriteLine("\t  ");
+                                    Console.WriteLine(" Ingrese el nuevo nombre del profesor: ");
+                                    bigboiMod.Nombre = Console.ReadLine();
+                                    Console.WriteLine(" Ingrese el nuevo apellido del profesor: ");
+                                    bigboiMod.Apellido = Console.ReadLine();
+                                    Console.WriteLine(" Ingrese el nuevo telefono del profesor: ");
+                                    bigboiMod.Tel = Convert.ToInt16(Console.ReadLine());
+                                    Console.WriteLine(" Ingrese el nuevo DNI del profesor: ");
+                                    bigboiMod.Dni = Convert.ToInt16(Console.ReadLine());
+                                    Console.WriteLine(" Ingrese la nueva dirección del profesor: ");
+                                    bigboiMod.Direc = Console.ReadLine();
+                                }
+
+
+
+                                ; break;
+
+                            //5- VOLVER AL MENU PRINCIPAL
+                            case 5: continue;    ; break;
+                           
+                        }
+
+
 
                         break;
 
 
                         //5- CAMBIAR ASIGNATURA POR PROFESOR
-                    case 5:
+                        case 5:
+
+
+
 
                      
 
