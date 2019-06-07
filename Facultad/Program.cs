@@ -78,6 +78,8 @@ namespace Facultad
 
                                     switch (caseSwitchAlumno)
                                     {
+
+                                    //1- INSCRIBIRSE A ASIGNATURA
                                     case 1:
                                 Console.WriteLine("\t --- UNI-APP --- ");
                                 Console.WriteLine("\t  ");
@@ -100,7 +102,7 @@ namespace Facultad
                                         }
                                     ; break;
 
-
+                                    //2- VER ALUMNOS POR MATERIA
                                     case 2:
 
                                 Console.WriteLine("\t --- UNI-APP --- ");
@@ -227,16 +229,43 @@ namespace Facultad
                                     ; break;
 
 
-
+                                    //6- Modificar
                                     case 6:
 
+                                Console.WriteLine("\t --- UNI-APP --- ");
+                                Console.WriteLine("\t  ");
+                                Console.WriteLine(" Escriba 7 para volver al Menu principal ");
+                                Console.WriteLine(" Ingrese el num de legajo del alumno al que quiere modificar:  ");
+                                int legnum = Convert.ToInt16(Console.ReadLine());
+                                if (legnum == 7) { continue; }
+                                else
+                                {
+                                    Alumno boi;
+                                    ProgramControl modAlumno = new ProgramControl();
+                                    boi = modAlumno.getAlumno(legnum);
 
-                                        ; break;
+                                    Console.WriteLine(" Ya puede modificar al alumno! ");
+                                    Console.WriteLine("\t  ");
+                                    Console.WriteLine(" Ingrese el nuevo nombre del alumno: ");
+                                    boi.Nombre = Console.ReadLine();
+                                    Console.WriteLine(" Ingrese el nuevo apellido del alumno: ");
+                                    boi.Apellido = Console.ReadLine();
+                                    Console.WriteLine(" Ingrese el nuevo telefono del alumno: ");
+                                    boi.Tel = Convert.ToInt16(Console.ReadLine());
+                                    Console.WriteLine(" Ingrese el nuevo DNI del alumno: ");
+                                    boi.Dni = Convert.ToInt16(Console.ReadLine());
+                                    Console.WriteLine(" Ingrese la nueva dirección del alumno: ");
+                                    boi.Direc = Console.ReadLine();
+                                }
+                                    ; break;
+
+
+                                    //7- VOLVER AL MENU PRINCIPAL.
                                     case 7:  continue; break;
 
                                     }
                     
-                          break;
+                    break;
 
 
                     //3- MENU AULAS
@@ -245,12 +274,43 @@ namespace Facultad
                         Console.WriteLine("\t  ");
                         Console.WriteLine(" 1- Ver aulas ");
                         Console.WriteLine(" 2- Cambiar aulas ");
-                        Console.WriteLine(" 3- Dar de alta ");
-                        Console.WriteLine(" 4- Dar de baja ");
-                        Console.WriteLine(" 5- Modificar ");
-                        Console.WriteLine(" 6- Volver al Menu principal ");
+                        Console.WriteLine(" 3- Volver al Menu principal ");
 
-                     
+                        int caseSwitchAula = Convert.ToInt16(Console.ReadLine());
+                        switch(caseSwitchAula)
+                        {
+                            case 1:
+
+                                Console.WriteLine("\t --- UNI-APP --- ");
+                                Console.WriteLine("\t  ");
+                                Console.WriteLine(" Las aulas son: ");
+                                Console.WriteLine("\t  ");
+                                ProgramControl seeAulas = new ProgramControl();
+                                
+                                Aula[] verAulass = seeAulas.verAulas();
+
+                                for(int i=0; i <= 8; i++)
+                                {
+                                    Console.WriteLine(verAulass[i]);
+                                }
+                             ; break;
+
+
+
+                            case 2:
+                                // ESTE NO ESTOY SEGURO DE COMO HACERLO JEJE
+                                Console.WriteLine("\t --- UNI-APP --- ");
+                                Console.WriteLine("\t  ");
+                                Console.WriteLine(" Las aulas son: ");
+
+
+
+                                ; break;
+
+
+                            case 3: continue; ; break;
+                        }
+                                    
 
 
                         break;
