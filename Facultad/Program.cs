@@ -438,14 +438,35 @@ namespace Facultad
                         break;
 
 
+
                         //5- CAMBIAR ASIGNATURA POR PROFESOR
                         case 5:
 
+                        Console.WriteLine("\t --- UNI-APP --- ");
+                        Console.WriteLine("\t  ");
+
+                        Console.WriteLine("Ingrese el DNI del profesor al que desee cambiar de asignatura: ");
+                        int dniProfe = Convert.ToInt16(Console.ReadLine());
+
+                        Console.WriteLine("Ingrese el DNI del profesor al que van a reemplazar en la asignatura: ");
+                        int dniProfeDespedido = Convert.ToInt16(Console.ReadLine());
+
+                        ProgramControl asigXprofe = new ProgramControl();
+
+                        Console.WriteLine("Ingrese la asignatura a la que desee cambiar de profesor");
+                        string newAsing = Console.ReadLine();
+
+                        ProgramControl darBajaProfeAnterior = new ProgramControl();
 
 
+                        darBajaProfeAnterior.bajaProfesor(dniProfeDespedido, newAsing);
 
-                     
+                                               
+                        Profesor profNewAsign = asigXprofe.getProfesor(dniProfe);
 
+                        asigXprofe.altaProfesor(profNewAsign, newAsing);
+
+                        Console.WriteLine("El profesor ha sido cambiado de asignatura con exito! ");
 
                         break;
 
