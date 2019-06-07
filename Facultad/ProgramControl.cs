@@ -162,6 +162,11 @@ namespace Facultad
             return true;
         }
 
+        public Profesor getProfesor(int dni){
+            Profesor profesor = Utils.findProfesor(asignaturas, dni);
+            return profesor;
+        }
+
 
 
     }
