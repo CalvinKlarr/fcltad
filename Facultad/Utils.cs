@@ -76,6 +76,20 @@ namespace Facultad
 
         }
 
+        public static Curso findCurso(string curso, Curso[] cursos)
+        {
+            Curso cur = null;
+            foreach(var c in cursos)
+            {
+                if (c.Cur.Equals(curso))
+                {
+                    cur = c;
+                }
+
+            }
+            return cur;
+        }
+
         public static Asignatura findAsignatura(Asignatura[] asignaturas, string asignatura)
         {
             Asignatura asig = null;
@@ -88,6 +102,22 @@ namespace Facultad
             }
             return asig;
 
+        }
+
+        public static Profesor findProfesor(Asignatura[] asignaturas, int dni) 
+        {
+            Profesor profesor = null;
+            foreach (var a in asignaturas)
+            {
+                foreach(var p in a.getProfesores())
+                {
+                    if(p.Dni == dni)
+                    {
+                        profesor = p;
+                    }
+                }
+            }
+            return profesor;
         }
     }
 }
